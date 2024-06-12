@@ -1,18 +1,33 @@
-const registerBtns = document.querySelectorAll('.question')
+const registerBtns = document.querySelectorAll('.question');
+
+function closeAllAnswers() {
+    const answers = document.querySelectorAll('.answer');
+    const icons = document.querySelectorAll('.icon-plus');
+
+    answers.forEach((answer, i) => {
+        answer.classList.remove('showed');
+        icons[i].setAttribute('src', './src/assets/images/icon-plus.svg');
+    });
+}
+
+closeAllAnswers();
 
 registerBtns.forEach((registerBtn, index) => {
     registerBtn.addEventListener('click', () => {
-        const answer = document.querySelectorAll('.answer')
-        const mostrar = document.querySelector('.showed')
+        const answers = document.querySelectorAll('.answer');
+        const icons = document.querySelectorAll('.icon-plus');
 
-        if(mostrar !== answer){
-            mostrar.classList.remove('showed')
+        closeAllAnswers();
+
+        answers[index].classList.toggle('showed');
+
+        if (answers[index].classList.contains('showed')) {
+            icons[index].setAttribute('src', './src/assets/images/icon-minus.svg');
+        } else {
+            icons[index].setAttribute('src', './src/assets/images/icon-plus.svg');
         }
-
-        answer[index].classList.toggle('showed')
-        })
-    })
-
+    });
+});
 
 
 
