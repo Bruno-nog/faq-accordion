@@ -9,7 +9,7 @@
 - [Demo](#demo)
 - [Contato](#contato)
 
-![gif do projeto]()
+![gif do projeto](./src/assets/images/faq-acordeon.gif)
 
 ## Visão Geral
 
@@ -23,7 +23,7 @@ Site de um desafio do FrontEndMentor, utilizando HTML, css e JS para automatizar
 
 ## Demo
 
-[Link para a demonstração do projeto](https://bruno-nog.github.io/verificador-email/)
+[Link para a demonstração do projeto](https://bruno-nog.github.io/faq-accordion/)
 
 ## Contato
 
